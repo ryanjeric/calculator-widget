@@ -1,0 +1,99 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+#calculator {
+    position: absolute;
+    background-color: #f3f3f3;
+    border: 1px solid #ccc;
+    width: 250px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+    display: none;
+    z-index: 2; /* Ensure calculator is above open button */
+}
+
+#calculator-header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: right;
+    cursor: move;
+}
+
+#closeBtn {
+    cursor: pointer;
+}
+
+#calculator-body {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+#display {
+    width: 100%;
+    padding: 10px 0;
+    margin-bottom: 10px;
+    font-size: 1.5em;
+    flex-grow: 1; /* Allow the display to expand to fill available space */
+    border: none; /* Remove border to improve appearance */
+}
+
+#buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+}
+
+button {
+    padding: 10px;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
+
+#openBtnContainer {
+    position: absolute;
+    cursor: move;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px; /* Increased padding to improve clickability */
+    border-radius: 5px;
+    user-select: none;
+    z-index: 1; /* Ensure open button is below calculator */
+}
+
+#openBtn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: #fff;
+    user-select: none;
+}
+
+#openBtnContainer:hover {
+    background-color: #0056b3;
+}
+
+
+/* Styles for the draggable container */
+.draggable-panel {
+    position: absolute;
+    background-color: #f3f3f3;
+    border: 2px solid #000;
+    border-radius: 5px;
+    cursor: move;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.draggable {
+    cursor: move;
+}
